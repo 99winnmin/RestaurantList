@@ -1,0 +1,11 @@
+naver:
+  url:
+    search:
+      local: https://openapi.naver.com/v1/search/local.json
+      image: https://openapi.naver.com/v1/search/image
+  client:
+    id: FfMxG7uupxtdFEdkvUmq
+    secret: E_DRVFeOAi
+
+server:
+  port: 9000
