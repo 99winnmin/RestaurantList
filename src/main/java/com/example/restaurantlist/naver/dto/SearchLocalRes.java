@@ -14,7 +14,6 @@ public class SearchLocalRes {
     private int total;
     private int start;
     private int display;
-    private String category;
     private List<SearchLocalItem> items;
 
     // api 에서 한 변수가 여러가지 데이터를 담고 있을 때는 static class로 하나 만들어준다.
@@ -25,6 +24,7 @@ public class SearchLocalRes {
         private String title;
         private String link;
         private String description;
+        private String category;
         private String telephone;
         private String address;
         private String roadAddress;
