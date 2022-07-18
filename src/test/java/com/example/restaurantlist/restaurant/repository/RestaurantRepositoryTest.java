@@ -18,7 +18,7 @@ public class RestaurantRepositoryTest {
         restaurant.setTitle("title");
         restaurant.setCategory("category");
         restaurant.setAddress("address");
-        restaurant.setReadAddress("readAddress");
+        restaurant.setRoadAddress("readAddress");
         restaurant.setHomePageLink("homePageLink");
         restaurant.setImageLink("imageLink");
         restaurant.setVisit(false);
@@ -48,7 +48,7 @@ public class RestaurantRepositoryTest {
         var saveEntity = restaurantRepository.save(expected);
 
         Assertions.assertEquals("update test", saveEntity.getTitle());
-        Assertions.assertEquals(1,restaurantRepository.listAll().size());
+        Assertions.assertEquals(1,restaurantRepository.findAll().size());
     }
 
     @Test
@@ -71,7 +71,7 @@ public class RestaurantRepositoryTest {
 
         restaurantRepository.deleteById(1);
 
-        int count = restaurantRepository.listAll().size();
+        int count = restaurantRepository.findAll().size();
 
         Assertions.assertEquals(0,count);
     }
@@ -85,7 +85,7 @@ public class RestaurantRepositoryTest {
         var restaurantEntity2 = create();
         restaurantRepository.save(restaurantEntity2);
 
-        int count = restaurantRepository.listAll().size();
+        int count = restaurantRepository.findAll().size();
 
         Assertions.assertEquals(2,count);
     }
