@@ -9,3 +9,8 @@ naver:
 
 server:
   port: 9000
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
